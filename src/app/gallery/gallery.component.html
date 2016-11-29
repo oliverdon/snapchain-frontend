@@ -1,0 +1,11 @@
+<h3 *ngIf="live">
+    <a routerLink="/"><i class="icon-close-outline"></i></a>&nbsp; You shared a selfie recently, but you can still  <a routerLink="/snap" class="btn green small">Share another</a>.
+</h3>
+
+<h3 *ngIf="!live">
+    <a routerLink="/"><i class="icon-close-outline"></i></a>&nbsp; You cannot view the selfies as you have not <a routerLink="/snap" class="btn green small">Shared a selfie</a> recently.
+</h3>
+
+<snapchain-photo *ngFor="let photoInput of photos" [photo]="photoInput"> </snapchain-photo>
+
+<div>Your account name is {{[hw]}}</div>

@@ -1,0 +1,21 @@
+.snap-holder {
+    text-align: center;
+}
+#snap-video {
+    width: 640;
+    height: 480;
+    border-radius: 0.5rem;
+    background-color: #C07B6A;
+}
+#snap-photo {
+    border-radius: 0.5rem;
+}
+.snap-buttonbar {
+    padding: 2rem;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.display-none   {
+    display: none;
+}

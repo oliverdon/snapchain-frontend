@@ -1,0 +1,21 @@
+
+<div class="snap-holder">
+
+    <h3 class="snap-account"><a routerLink="/"><i class="icon-close-outline"></i></a>&nbsp; Photos</h3>
+    <video #snapVideo [hidden]="snapState !== SnapState.RECORDING" id="snap-video" ></video>
+    <canvas #snapCanvas id="snap-canvas" class="display-none" ></canvas>
+    <img #snapPhoto [hidden]="snapState !== SnapState.CAPTURED" id="snap-photo" src="{{photoSrc}}" width="{{videoWidth}}" height="{(videoHeight}}" />
+    <div class="snap-buttonbar grid-preview">
+
+        <div class="col-1-3 space">
+            <button *ngIf="snapState === SnapState.CAPTURED" id="snap-retake-button" (click)="stateChange(SnapState.RECORDING)" class="btn blue large">Retake Photo
+            </button>
+        </div>
+        <div class="col-1-3 space">
+            <button *ngIf="snapState === SnapState.RECORDING" id="snap-capture-button" (click)="stateChange(SnapState.CAPTURED)" class="btn green large">Take Photo</button>
+        </div>
+        <div class="col-1-3 space">
+            <button *ngIf="snapState === SnapState.CAPTURED" id="snap-send-button" (click)="stateChange(SnapState.SENDING)" class="btn green large">Send Photo</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+.photo-galler-holder {
+    text-align: center;
+}
+.photo-holder {
+    margin: 3rem;
+}
+.photo-image {
+    width: 50%;
+    border-radius: 0.5rem;
+}
